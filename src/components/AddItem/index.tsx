@@ -9,7 +9,8 @@ export const AddItem = ({ onEnter }: Props) => {
   const [values, setValues] = useState("");
 
   const handleKeyUp = (e: KeyboardEvent) => {
-    if (e.code === "Enter" && values !== "") {
+    console.log(e.code);
+    if (e.code === "NumpadEnter" && values !== "") {
       onEnter(values);
       setValues("");
     }
